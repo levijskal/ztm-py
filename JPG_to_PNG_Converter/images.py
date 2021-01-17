@@ -1,0 +1,15 @@
+from PIL import Image, ImageFilter
+
+img = Image.open('./astro.jpg')
+filterered_img = img.convert('L')
+# filterered_img.save("grey.png", 'png')
+# filterered_img.show()
+# croocked = filterered_img.rotate(180)
+# croocked.save("grey.png", 'png')
+# resize = filterered_img.resize((300, 300))
+# resize.save("grey.png", 'png')
+# box = (100,100,400,400)
+# region = filterered_img.crop(box)
+# region.save('grey.png', 'png')
+img.thumbnail((400, 200))
+img.save('thumbnail.jpg')
